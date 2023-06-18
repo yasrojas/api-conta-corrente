@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vb47/lvC5tmfmsnIWCBbi5fVNFL6/GW17A9rPzjF2P3Z0YV+N0zukIYKGTfbxA8ekn7gaOSymoOTtDitNjeHmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ynogueira\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\ynogueira\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\ynogueira\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

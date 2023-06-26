@@ -19,9 +19,5 @@ namespace Infrastructure
         public CurrentAccountDbContext(DbContextOptions options) : base(options)
         {
         }
-
-        protected CurrentAccountDbContext()
-        {
-        }
     }
 }

@@ -10,6 +10,8 @@ namespace Application.Commands.CreateCurrentAccount
 {
     public class CreateCurrentAccountCommandHandler : IRequestHandler<CreateCurrentAccountCommand, CreateCurrentAccountResponse>
     {
+        public CreateCurrentAccountCommandHandler() { }
+
         public Task<CreateCurrentAccountResponse> Handle(CreateCurrentAccountCommand request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();

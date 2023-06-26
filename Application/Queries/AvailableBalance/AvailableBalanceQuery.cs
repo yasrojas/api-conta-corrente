@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Queries.AvailableBalance
 {
-    internal class AvailableBalanceQuery
+    public class AvailableBalanceQuery
     {
     }
 }

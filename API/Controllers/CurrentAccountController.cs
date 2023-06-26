@@ -5,9 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    [ApiController]
+    [Route("v1/current-account")]
     public class CurrentAccountController : ControllerBase
     {
         private readonly IMediator _mediator;
+
         public CurrentAccountController(IMediator mediator) 
         { 
             _mediator = mediator;
@@ -43,7 +46,7 @@ namespace API.Controllers
         }
 
         //Consultar o saldo da conta
-        [HttpGet("availableBalance")]
+        [HttpGet("available-balance")]
         public IActionResult GetAvailableBalance()
         {
             throw new NotImplementedException();
@@ -57,7 +60,7 @@ namespace API.Controllers
         }
 
         //Consultar o extrato da conta por tipo de operação (crédito ou débito)
-        [HttpGet("extractByType")]
+        [HttpGet("extract-by-type")]
         public IActionResult GetAccountExtractByType()
         {
             throw new NotImplementedException();

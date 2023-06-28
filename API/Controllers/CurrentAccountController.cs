@@ -23,7 +23,11 @@ namespace API.Controllers
             _mediator = mediator;
         }
 
-        //Criar uma conta corrente
+        /// <summary>
+        /// Create an account
+        /// </summary>
+        /// <param name="command">Object with name of desired account</param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.Created)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
@@ -33,7 +37,12 @@ namespace API.Controllers
             return response.HasError ? HandleError(response.Error) : CreatedAtAction(nameof(GetAvailableBalance), new { id = response.Data }, response.Data);
         } 
 
-        //Realizar um depósito
+        /// <summary>
+        /// Deposit to an account
+        /// </summary>
+        /// <param name="id">Account identifier</param>
+        /// <param name="amount">Value to deposit</param>
+        /// <returns></returns>
         [HttpPost("{id}/deposit")]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.Created)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
@@ -44,18 +53,29 @@ namespace API.Controllers
             return response.HasError ? HandleError(response.Error) : CreatedAtAction(nameof(GetAccountExtract), new GetExtractByFiltersQuery { Id = response.Data, Account_Id = id, Type = null, InitialDate = null, EndDate = null }, response.Data);
         }
 
-        //Realizar um saque
-        [HttpPost("{id}/withdrawal")]
+        /// <summary>
+        /// Withdraw of an account
+        /// </summary>
+        /// <param name="id">Account identifier</param>
+        /// <param name="amount">Value to withdraw</param>
+        /// <returns></returns>
+        [HttpPost("{id}/withdraw")]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.Created)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
-        public async Task<IActionResult> Withdrawal([FromRoute] string id, [FromBody] decimal amount)
+        public async Task<IActionResult> Withdraw([FromRoute] string id, [FromBody] decimal amount)
         {
             var response = await _mediator.Send(new CreateWithdrawCommand(id, amount));
             return response.HasError ? HandleError(response.Error) : CreatedAtAction(nameof(GetAccountExtract), new GetExtractByFiltersQuery{ Id = response.Data, Account_Id = id, Type = null, InitialDate = null, EndDate = null }, response.Data);
         }
 
-        //Realizar uma transferência entre contas
+        /// <summary>
+        /// Transfer value between accounts
+        /// </summary>
+        /// <param name="sourceId">Source account identifier</param>
+        /// <param name="destinationId">Destination account identifier</param>
+        /// <param name="amount">Value to transfer</param>
+        /// <returns></returns>
         [HttpPost("{sourceId}/transfer/{destinationId}")]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.Created)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
@@ -66,7 +86,11 @@ namespace API.Controllers
             return response.HasError ? HandleError(response.Error) : CreatedAtAction(nameof(GetAccountExtract), new GetExtractByFiltersQuery { Id = response.Data, Account_Id = sourceId, Type = null, InitialDate = null, EndDate = null }, response.Data);
         }
 
-        //Consultar o saldo da conta
+        /// <summary>
+        /// Obtain available balance of account
+        /// </summary>
+        /// <param name="id">Account identifier</param>
+        /// <returns></returns>
         [HttpGet("{id}/available-balance")]
         [ProducesResponseType(typeof(decimal), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
@@ -76,7 +100,11 @@ namespace API.Controllers
             return response.HasError ? HandleError(response.Error) : Ok(response.Data);
         }
 
-        //Consultar o extrato da conta por período e tipo de operação (crédito ou débito)
+        /// <summary>
+        /// Obtain extract with movements per account with optional filter, such as initial date, movement identifier, end date and type(credit or debit)
+        /// </summary>
+        /// <param name="filter">Movements filter</param>
+        /// <returns></returns>
         [HttpGet("extract")]
         [ProducesResponseType(typeof(IEnumerable<Movements>), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]

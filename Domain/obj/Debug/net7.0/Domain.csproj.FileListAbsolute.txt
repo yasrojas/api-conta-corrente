@@ -10,3 +10,15 @@ C:\Users\ynogueira\source\repos\api-conta-corrente\Domain\obj\Debug\net7.0\Domai
 C:\Users\ynogueira\source\repos\api-conta-corrente\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\ynogueira\source\repos\api-conta-corrente\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\ynogueira\source\repos\api-conta-corrente\Domain\obj\Debug\net7.0\ref\Domain.dll
+D:\Git\api-conta-corrente\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\Git\api-conta-corrente\Domain\bin\Debug\net7.0\Domain.dll
+D:\Git\api-conta-corrente\Domain\bin\Debug\net7.0\Domain.pdb
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\Domain.dll
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\Domain.pdb
+D:\Git\api-conta-corrente\Domain\obj\Debug\net7.0\ref\Domain.dll

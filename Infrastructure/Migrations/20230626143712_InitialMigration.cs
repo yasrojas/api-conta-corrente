@@ -18,8 +18,8 @@ namespace Infrastructure.Migrations
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    Balance = table.Column<BigInteger>(type: "numeric", nullable: false),
-                    Limit = table.Column<BigInteger>(type: "numeric", nullable: false)
+                    Balance = table.Column<decimal>(type: "numeric", nullable: false),
+                    Limit = table.Column<decimal>(type: "numeric", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -33,7 +33,7 @@ namespace Infrastructure.Migrations
                     Id = table.Column<string>(type: "text", nullable: false),
                     Account_Id = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    Amount = table.Column<BigInteger>(type: "numeric", nullable: false),
+                    Amount = table.Column<decimal>(type: "numeric", nullable: false),
                     Type = table.Column<int>(type: "integer", nullable: false),
                     Date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },

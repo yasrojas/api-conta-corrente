@@ -28,10 +28,10 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("text");
 
-                    b.Property<BigInteger>("Balance")
+                    b.Property<decimal>("Balance")
                         .HasColumnType("numeric");
 
-                    b.Property<BigInteger>("Limit")
+                    b.Property<decimal>("Limit")
                         .HasColumnType("numeric");
 
                     b.Property<string>("Name")
@@ -52,7 +52,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<BigInteger>("Amount")
+                    b.Property<decimal>("Amount")
                         .HasColumnType("numeric");
 
                     b.Property<DateTime>("Date")

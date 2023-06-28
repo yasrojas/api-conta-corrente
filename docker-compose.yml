@@ -3,17 +3,39 @@ version: '3.4'
 services:
   api:
     image: ${DOCKER_REGISTRY-}api
+    container_name: api
     build:
       context: .
       dockerfile: API/Dockerfile
+    environment:
+      PostgresCurrentAccountDb: "Server=postgres-db;Port=5432;Database=CurrentAccount;Username=postgres;Password=senha123;"
+    depends_on:
+      - postgres-db
+    ports:
+      - 8081:8081
   postgres-db:
     image: postgres
+    container_name: postgres-db
     restart: always
     environment:
       POSTGRES_PASSWORD: senha123
       POSTGRES_USER: postgres
+      POSTGRES_DB: CurrentAccount
+    ports:
+      - 15432:5432
   adminer:
     image: adminer
     restart: always
     ports:
       - 8082:8082
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: yas-nogueira@hotmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    depends_on:
+      - postgres-db

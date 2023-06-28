@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Infrastructure\\Infrastructure.csproj": {}
+    "D:\\Git\\api-conta-corrente\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Domain\\Domain.csproj": {
+    "D:\\Git\\api-conta-corrente\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Git\\api-conta-corrente\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\ynogueira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Domain\\obj\\",
+        "projectPath": "D:\\Git\\api-conta-corrente\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\yas-n\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\api-conta-corrente\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ynogueira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yas-n\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://tfs.ativainvestimentos.com.br/tfs/TeamAtivaProjectCollection/_packaging/ativa-prod/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -44,6 +43,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
             }
           },
           "imports": [
@@ -66,17 +69,17 @@
         }
       }
     },
-    "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Git\\api-conta-corrente\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Git\\api-conta-corrente\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\ynogueira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Infrastructure\\obj\\",
+        "projectPath": "D:\\Git\\api-conta-corrente\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\yas-n\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\api-conta-corrente\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ynogueira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yas-n\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,15 +87,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://tfs.ativainvestimentos.com.br/tfs/TeamAtivaProjectCollection/_packaging/ativa-prod/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\ynogueira\\source\\repos\\api-conta-corrente\\Domain\\Domain.csproj"
+              "D:\\Git\\api-conta-corrente\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Git\\api-conta-corrente\\Domain\\Domain.csproj"
               }
             }
           }

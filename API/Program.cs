@@ -1,9 +1,17 @@
 using Application;
 using Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Diagnostics.Metrics;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.SetBasePath(Path.Combine(Directory.GetCurrentDirectory())).AddJsonFile("appsettings.json", false)
+            .AddJsonFile($"appsettings.Development.json", false)
+            .AddEnvironmentVariables()
+            .Build();
+
+builder.Logging.AddConsole().SetMinimumLevel(LogLevel.Information);
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -12,9 +20,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplication();
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddInfrastructure();
 
 var app = builder.Build();
+
+using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
+{
+    var context = serviceScope.ServiceProvider.GetService<CurrentAccountDbContext>();
+    context.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

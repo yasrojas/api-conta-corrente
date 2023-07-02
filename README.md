@@ -3,6 +3,7 @@ A simple .NET 7 API using PostgreSQL, Docker, Entity Framework Core and Swagger 
 
 ## Prerequisites
 1. [Docker](https://www.docker.com/)
+2. [Docker compose](https://docs.docker.com/compose/)
 
 ## Steps
 1. `git clone https://github.com/yasrojas/api-conta-corrente.git`
